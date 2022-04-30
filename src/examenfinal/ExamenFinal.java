@@ -17,19 +17,18 @@ public class ExamenFinal {
         int menu=0;
         Scanner leerDato = new Scanner(System.in);
 
+            
+            
+            
+        while(menu!=4){
             System.out.println("1. Ejercicio 1");  
             System.out.println("2. Ejercicio 2");  
             System.out.println("3. Ejercicio 3");  
             System.out.println("4. salir");
             menu = leerDato.nextInt();
-            leerDato.nextLine();
-            
-            
-        while(menu!=4){
-            
             switch(menu){
                 case 1:
-                    eje1();                 
+                    eje1();
                     break;
                 
                 case 2:
@@ -62,26 +61,30 @@ public class ExamenFinal {
         Scanner dato = new Scanner(System.in);
         System.out.println("ingresar numero para piramide");
         int filas= dato.nextInt();
-        dato.close();
-        int dato2=0;
+        int dato2;
+        dato2= filas%2;
         
-        if (filas/2==0) {
-            filas = filas;
+        if (dato2==0) {
+            System.out.println("no es numero impar");
         }else{
-            filas = filas-1;
-        }
-        for (int i = 1; i <= filas; i++) {
+            for (int i = 1; i <= filas; i++) {
 
             for (int j = 1; j <= filas - i; j++) {
 
                 System.out.print(" ");
             }
-            for (int k = 1; k <= (i * 2) - 1; k++) {
+            for (int k = 1; k <= i*2-1; k++) {
 
                 System.out.print("*");
             }
             System.out.println();
         }
+        }
+        
+        
+    }
+    
+    public static void eje3(){
         
     }
     
